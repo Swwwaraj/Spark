@@ -21,13 +21,13 @@ export const AuthProvider = ({ children }) => {
         const { data } = await axios.get('https://spark0.onrender.com/api/auth/user');
 
         if (data && data.username) {
-          console.log('User loaded:', data); // 🔍 Debugging
+          console.log('User loaded:', data); 
           setUser({
             _id: data._id,
             firstName: data.firstName,
             lastName: data.lastName,
             email: data.email,
-            username: data.username, // ✅ Store username
+            username: data.username, // 
           });
           setIsAuthenticated(true);
         } else {
