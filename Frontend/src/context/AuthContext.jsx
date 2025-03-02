@@ -18,7 +18,7 @@ export const AuthProvider = ({ children }) => {
 
       try {
         axios.defaults.headers.common['x-auth-token'] = token;
-        const { data } = await axios.get('https://spark-linktree-server.onrender.com/api/auth/user');
+        const { data } = await axios.get('https://spark0.onrender.com/api/auth/user');
 
         if (data && data.username) {
           console.log('User loaded:', data); // 🔍 Debugging
@@ -47,7 +47,7 @@ export const AuthProvider = ({ children }) => {
 
   const login = async (email, password) => {
     try {
-      const { data } = await axios.post('https://spark-linktree-server.onrender.com/api/auth/login', { email, password });
+      const { data } = await axios.post('https://spark0.onrender.com/api/auth/login', { email, password });
 
       if (data?.token && data?.user) {
         console.log('Login response:', data.user); // 🔍 Debugging
@@ -73,7 +73,7 @@ export const AuthProvider = ({ children }) => {
 
   const register = async (userData) => {
     try {
-      const { data } = await axios.post('https://spark-linktree-server.onrender.com/api/auth/register', userData);
+      const { data } = await axios.post('https://spark0.onrender.com/api/auth/register', userData);
 
       if (data?.token && data?.user) {
         console.log('Registration response:', data.user); // 🔍 Debugging
