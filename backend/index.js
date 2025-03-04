@@ -16,7 +16,7 @@ app.use(express.json());
 app.use(cors());
 
 // Connect to MongoDB
-mongoose.connect(process.env.MONGO_URI || 'mongodb://localhost:27017/spark')
+mongoose.connect(process.env.MONGO_URI || 'mongodb://localhost:27017/spark_linktree')
   .then(() => console.log('MongoDB connected'))
   .catch(err => console.error('MongoDB connection error:', err));
 
